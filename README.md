@@ -1,10 +1,16 @@
 hoc2js
 ======
 
-Very simple utility for converting from Typesafe's HOCON to JSON
+A command-line tool to convert
+[HOCON](https://github.com/typesafehub/config/blob/master/HOCON.md) to JSON.
+HOCON is JSON-like but is a config file format for supporting human usage, developed by
+[Typesafe](http://typesafe.com/).
 
 ## License
 The license is Apache 2.0.
+
+## Requirement
+- Java 6 or later
 
 ## Installation
 Get an executable jar from [release page](https://github.com/okapies/hoc2js/releases).
@@ -29,7 +35,7 @@ $ java -jar hoc2js-1.1.jar test1.conf test2.conf
 The input HOCON may contain [substitutions](https://github.com/typesafehub/config/blob/master/HOCON.md#substitutions):
 
 ```
-$ java -prop.test="hello" -jar hoc2js-1.1.jar
+$ java -Dprop.test="hello" -jar hoc2js-1.1.jar
 test = ${prop.test}
 path = ${PATH}
 ^D
