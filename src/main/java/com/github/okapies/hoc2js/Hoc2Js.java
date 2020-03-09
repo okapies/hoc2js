@@ -30,6 +30,7 @@ public class Hoc2Js {
 
         // resolve
         ConfigResolveOptions resolveOpts = loadResolveOpts(config);
+        obj = obj.resolve(resolveOpts.setAllowUnresolved(true));
         obj = obj.resolveWith(config, resolveOpts);
 
         // render
